@@ -14,7 +14,6 @@ public class CatZoo {
         System.out.println("And our special event: you can explode your cat");
         System.out.println("Please if you are \"ХАНЖА\" don't disturb another people");
         System.out.println("We are Java-developers, we are strange");
-
     }
 
     public static CatZoo getCatZoo() {
@@ -77,6 +76,7 @@ public class CatZoo {
         System.out.println(cats[cat].getName()+"  "+cats[cat].getStatus());
         cats[cat]=null;
     }
+
     private void meowCatToDeath(int cat) throws IOException {
         System.out.println(cats[cat].getWeight());
         while (!(cats[cat].getStatus().equals("Dead"))) {
