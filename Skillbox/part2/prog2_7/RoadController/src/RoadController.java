@@ -59,29 +59,23 @@ public class RoadController
                 blockWay("высота вашего ТС превышает высоту пропускного пункта!");
                 continue;
             } else {
-                        if ((carHeight < passengerCarMaxHeight) && (weight < passengerCarMaxWeight))
-                        {
+                        if ((carHeight < passengerCarMaxHeight) && (weight < passengerCarMaxWeight)) {
                             price = passengerCarPrice;
-                        }
-                        else price = cargoCarPrice;
-                        if (car.hasVehicle())
-                        {
+                        } else price = cargoCarPrice;
+                        if (car.hasVehicle()) {
                             price = price + vehicleAdditionalPrice;
                         }
-                    }
+            }
 
             /**
              * Проверка скорости подъезда и выставление штрафа
              */
             Integer carSpeed = Camera.getCarSpeed(car); //переменная carSpeed integer
-            if(carSpeed > criminalSpeed)
-            {
+            if(carSpeed > criminalSpeed) {
                 Police.call("cкорость автомобиля - " + carSpeed + " км/ч, номер - " + car.getNumber());
                 blockWay("вы значительно превысили скорость. Ожидайте полицию!");
                 continue;
-            }
-            else if(carSpeed > maxOncomingSpeed)
-            {
+            } else if(carSpeed > maxOncomingSpeed) {
                 Integer overSpeed = carSpeed - maxOncomingSpeed; // перемнная overspeed типа Integer
                 Integer totalFine = finePerGrade * (1 + overSpeed / speedFineGrade); // переменная totalfine типа integer
                 System.out.println("Вы превысили скорость! Штраф: " + totalFine + " руб.");
