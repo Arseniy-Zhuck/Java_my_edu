@@ -49,7 +49,7 @@ public class Loader
         welcome();
         System.out.println("Do you wanna play? Yes/...");
         String answer = (new BufferedReader(new InputStreamReader(System.in))).readLine();
-        if (answer.equals("Yes")) {
+        if (answer.toLowerCase().equals("yes")) {
             Cat myCat = Cat.getCat();
             System.out.println("Your cat is "+myCat.getStatus());
             System.out.println("What's the name of your cat?");
