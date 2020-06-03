@@ -1,0 +1,19 @@
+App api_id: 276685
+App api_hash: 982c56d252af8ee74195134bc509cee1
+App title: Telegram CustomZ
+Short name: TelegramC
+
+Test configuration: 149.154.167.40:443
+Production configuration: 149.154.167.50:443
+
+Public keys: -----BEGIN RSA PUBLIC KEY-----
+MIIBCgKCAQEAwVACPi9w23mF3tBkdZz+zwrzKOaaQdr01vAbU4E1pvkfj4sqD
+lyDONS789sVoD/xCS9Y0hkkC3gtL1tSfTlgCMOOul9lcixlEKzwKENj1Yz/s7
+an9tqw3bfUV/nqgbhGX81v/+7RFAEd+RwFnK7a+XYl9sluzHRyVVaTTveB2Ga
+Efzk2DWgkBluml8OREmvfraX3bkHZJTKX4EQSjBbbdJ2ZXIsRrYOXfaA+xayE
+8hdlLmAjbCVfaigxX0CDqWeR1yFL9kwd9P0NsZRPsmoqVwMbMu7mStFai6aIh
+Slv8kg9qv1m6XHVQY3PnEw+QQtqSIXklHwIDAQAB
+-----END RSA PUBLIC KEY-----
+
+
+number hash: 9880741d25189ccca9

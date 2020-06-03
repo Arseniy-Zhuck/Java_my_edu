@@ -54,7 +54,7 @@ public class Loader
             System.out.println("Your cat is "+myCat.getStatus());
             System.out.println("What's the name of your cat?");
             myCat.setName((new BufferedReader(new InputStreamReader(System.in))).readLine());
-            Integer ch= choice();
+            int ch= choice();
             while ((ch>0)&&(ch<5)&&((myCat.getStatus().equals("Sleeping"))||(myCat.getStatus().equals("Playing")))) {
                 make(ch,myCat);
 
