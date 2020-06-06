@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class RoadController {
     private static double passengerCarMaxWeight = 3500.0; // kg
     private static int passengerCarMaxHeight = 2000; // mm
-    private static int controllerMaxHeight = 4000; // mm
+    private static int controllerMaxHeight = 3500; // mm
 
     private static int passengerCarPrice = 100; // RUB
     private static int cargoCarPrice = 250; // RUB
@@ -43,26 +43,15 @@ public class RoadController {
      */
     private static int calculatePrice(Car car) {
         int carHeight = car.height;
+        double weight = car.weight;
         int price = 0;
         if (carHeight > controllerMaxHeight) {
             blockWay("высота вашего ТС превышает высоту пропускного пункта!");
             return -1;
-        } else if (carHeight > passengerCarMaxHeight) {
-            double weight = car.weight;
-            //Грузовой автомобиль
-            if (weight > passengerCarMaxWeight) {
-                price = passengerCarPrice;
-                if (car.hasVehicle) {
-                    price = price + vehicleAdditionalPrice;
-                }
-            }
-            //Легковой автомобиль
-            else {
-                price = cargoCarPrice;
-            }
-        } else {
-            price = passengerCarPrice;
-        }
+        } else if ((carHeight > passengerCarMaxHeight)||(weight>passengerCarMaxWeight)) {
+            price = cargoCarPrice;
+        } else price = passengerCarPrice;
+        if (car.hasVehicle) price+=vehicleAdditionalPrice;
         return price;
     }
 
