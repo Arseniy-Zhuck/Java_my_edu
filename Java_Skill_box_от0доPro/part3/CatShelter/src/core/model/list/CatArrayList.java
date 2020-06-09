@@ -78,4 +78,9 @@ public class CatArrayList implements CatCollection{
         return cats.size();
     }
 
+    @Override
+    public void showCats() {
+
+    }
+
 }

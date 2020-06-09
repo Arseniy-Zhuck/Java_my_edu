@@ -3,6 +3,7 @@ package core.conroller;
 import core.model.list.CatArray;
 import core.model.list.CatArrayList;
 import core.view.io.CatFileReading;
+import core.view.term.MainProg;
 
 import java.io.IOException;
 
@@ -15,10 +16,11 @@ public class CatShelter {
 
 
     // переменные объекта
-    private CatArray ourCats = new CatArray(MAX_CAT_COUNT);
+    private CatArray ourCats;
     private CatArrayList givenCats,deadCats;
     private State state;
     private String ourCatsPath,givenCatsPath,deadCatsPath;
+    private MainProg mainProg;
     // методы класса
 
     public static CatShelter getInstance() throws IOException {
@@ -26,9 +28,7 @@ public class CatShelter {
         return instance;
     }
 
-    public void showOurCats(){
 
-    }
 
 
     // конструкторы
@@ -37,12 +37,22 @@ public class CatShelter {
     }
     // методы объекта
 
+    public void setMainProg(MainProg mainProg){
+        this.mainProg = mainProg;
+    }
+
+
+    public void showOurCats(){
+        ourCats.showCats();
+    }
+
+
     private void setFilePaths() {
         this.ourCatsPath = "AliveCats.txt";
     }
 
     private void initialize() throws IOException {
-        ourCats = new CatArray(MAX_CAT_COUNT);
+        ourCats = new CatArray(MAX_CAT_COUNT, this);
         givenCats = new CatArrayList(MAX_CAT_COUNT);
         deadCats = new CatArrayList(MAX_CAT_COUNT);
         setFilePaths();

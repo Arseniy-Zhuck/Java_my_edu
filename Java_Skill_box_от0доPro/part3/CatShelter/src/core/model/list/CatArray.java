@@ -1,6 +1,10 @@
 package core.model.list;
 
+import core.conroller.CatShelter;
 import core.model.example.Cat;
+import core.view.term.AbstractTerm;
+import core.view.term.ListCatTerm;
+
 
 public class CatArray implements CatCollection {
 
@@ -8,12 +12,18 @@ public class CatArray implements CatCollection {
     private int catCount;
     private Cat[] cats;
     private int currentCatIndex;
+    private AbstractTerm gUI;
+    private CatShelter catShelter;
 
-    public CatArray(int maxCats) {
+    public CatArray(int maxCats, CatShelter catShelter) {
         this.maxCats = maxCats;
         this.cats = new Cat[maxCats];
         this.currentCatIndex = -1;
         this.catCount = 0;
+        this.catShelter = catShelter;
+        this.gUI = new ListCatTerm(this, catShelter);
+        this.gUI.
+
     }
     @Override
     public int getIndexByCat(Cat cat) {

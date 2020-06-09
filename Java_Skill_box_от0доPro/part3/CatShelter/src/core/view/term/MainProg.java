@@ -1,16 +1,17 @@
-import core.conroller.CatShelter;
+package core.view.term;
 
+import core.conroller.CatShelter;
 import core.conroller.State;
 import core.conroller.WhiteState;
-import core.view.io.SimpleReading;
-import core.view.term.AbstractTerm;
-
 import java.io.IOException;
-
 import static java.lang.System.out;
 
 
 public class MainProg extends AbstractTerm {
+
+    private MainProg(CatShelter catShelter){
+        super(catShelter);
+    }
 
     private String hello() {
         return "Wellcome to our CatShelter \"SkillBox\" with dark and black sides\n" +
@@ -29,9 +30,14 @@ public class MainProg extends AbstractTerm {
                 "5. Leave us";
     }
 
+    @Override
+    protected void setStrategy() {
+
+    }
+
     protected void doJob(int choice) throws IOException {
         switch (choice) {
-            case 1: break;
+            case 1: catShelter.showOurCats(); break;
             case 2: break;
             case 3: break;
             case 4: break;
@@ -43,10 +49,11 @@ public class MainProg extends AbstractTerm {
     }
 
     public static void main(String[] args) throws IOException {
-        MainProg mP = new MainProg();
         CatShelter catShelter = CatShelter.getInstance();
+        MainProg mP = new MainProg(catShelter);
         State whiteState = new WhiteState(catShelter);
         catShelter.setState(whiteState);
+        catShelter.setMainProg(mP);
         out.println(mP.hello());
         mP.run();
     }

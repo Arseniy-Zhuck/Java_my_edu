@@ -1,19 +1,20 @@
 package core.view.term;
 
+import core.conroller.CatShelter;
 import core.conroller.Strategy;
 import core.model.list.CatCollection;
 import core.view.io.SimpleReading;
 
 import java.io.IOException;
 
-public class listCatTerm implements Strategy{
+public class ListCatTerm extends AbstractTerm implements Strategy{
     private CatCollection catCollection;
     private Strategy strategy;
 
 
-    public listCatTerm(CatCollection catCollection, Strategy strategy) {
+    public ListCatTerm(CatCollection catCollection, CatShelter catShelter) {
+        super(catShelter);
         this.catCollection = catCollection;
-        this.strategy = strategy;
     }
 
     public void showCats() {
@@ -33,8 +34,14 @@ public class listCatTerm implements Strategy{
 
 
     @Override
-    public void showCommands() {
-        strategy.showCommands();
+    public String showCommands() {
+        return strategy.showCommands();
+
+    }
+
+    @Override
+    protected void setStrategy(Strategy strategy) {
+        this.strategy = strategy;
     }
 
     @Override

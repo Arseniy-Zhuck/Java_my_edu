@@ -1,6 +1,7 @@
 package core.conroller;
 
 public interface Strategy {
-    public void showCommands();
+
+    public String showCommands();
     public void doJob(int choice);
 }
