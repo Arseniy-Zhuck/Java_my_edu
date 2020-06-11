@@ -7,9 +7,9 @@ import core.view.io.SimpleReading;
 
 import java.io.IOException;
 
-public class ListCatTerm extends AbstractTerm implements Strategy{
+public class ListCatTerm extends AbstractTerm {
     private CatCollection catCollection;
-    private Strategy strategy;
+
 
 
     public ListCatTerm(CatCollection catCollection, CatShelter catShelter) {
@@ -17,35 +17,14 @@ public class ListCatTerm extends AbstractTerm implements Strategy{
         this.catCollection = catCollection;
     }
 
+    @Override
     public void showCats() {
-
-    }
-
-    private int getChoice() throws IOException {
-        return SimpleReading.readInteger();
-    }
-
-
-    public void run() {
-        showCats();
-        showCommands();
-
-    }
-
-
-    @Override
-    public String showCommands() {
-        return strategy.showCommands();
-
-    }
-
-    @Override
-    protected void setStrategy(Strategy strategy) {
-        this.strategy = strategy;
-    }
-
-    @Override
-    public void doJob(int choice) {
-        strategy.doJob(choice);
+        if (catCollection.getCatCount()==0) strategy.noCats();
+        else {
+            while (catCollection.hasCurrentCat()) {
+                System.out.println(catCollection.getCurrentCat());
+                catCollection.nextCat();
+            }
+        }
     }
 }

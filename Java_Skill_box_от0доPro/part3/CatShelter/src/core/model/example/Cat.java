@@ -1,5 +1,7 @@
 package core.model.example;
 
+import java.util.Date;
+
 public class Cat
 {
 
@@ -12,6 +14,14 @@ public class Cat
     private String name;
     private boolean isDead;
     private CatState state;
+    private boolean isOur;
+    private String owner;
+    private Date deathDate;
+    private Date giveDate;
+
+
+
+
 
     public Cat(String name)
     {
@@ -40,6 +50,10 @@ public class Cat
     public void drink(Double amount)
     {
         weight = weight + amount;
+    }
+
+    public String toString(){
+        return state.toStr();
     }
 
     public Double getWeight()

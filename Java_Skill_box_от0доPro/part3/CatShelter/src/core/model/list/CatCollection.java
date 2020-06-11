@@ -2,6 +2,8 @@ package core.model.list;
 
 import core.model.example.Cat;
 
+import java.io.IOException;
+
 public interface CatCollection {
     Cat getCurrentCat();
     boolean hasCurrentCat();
@@ -15,6 +17,6 @@ public interface CatCollection {
     void setCurrentCat(int catIndex);
     Cat firstCat();
     int getCatCount();
-    void showCats();
+    void showCats() throws IOException;
 
 }

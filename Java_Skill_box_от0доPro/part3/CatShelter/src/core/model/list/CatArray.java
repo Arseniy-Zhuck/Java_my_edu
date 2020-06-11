@@ -1,9 +1,12 @@
 package core.model.list;
 
+import core.conroller.AliveStrategy;
 import core.conroller.CatShelter;
 import core.model.example.Cat;
 import core.view.term.AbstractTerm;
 import core.view.term.ListCatTerm;
+
+import java.io.IOException;
 
 
 public class CatArray implements CatCollection {
@@ -22,7 +25,7 @@ public class CatArray implements CatCollection {
         this.catCount = 0;
         this.catShelter = catShelter;
         this.gUI = new ListCatTerm(this, catShelter);
-        this.gUI.
+        this.gUI.setStrategy(new AliveStrategy((ListCatTerm) this.gUI));
 
     }
     @Override
@@ -54,8 +57,8 @@ public class CatArray implements CatCollection {
     }
 
     @Override
-    public void showCats() {
-
+    public void showCats() throws IOException {
+        this.gUI.run();
     }
 
     @Override

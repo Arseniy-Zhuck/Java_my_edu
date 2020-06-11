@@ -9,9 +9,9 @@ import java.io.IOException;
 import static java.lang.System.out;
 
 public abstract class AbstractTerm {
-    protected abstract String showCommands();
+
     protected CatShelter catShelter;
-    protected abstract void setStrategy(Strategy strategy);
+    protected Strategy strategy;
 
     public AbstractTerm(CatShelter catShelter) {
         this.catShelter = catShelter;
@@ -21,9 +21,22 @@ public abstract class AbstractTerm {
         return SimpleReading.readInteger();
     }
 
-    protected abstract void doJob(int choice) throws IOException;
+    public void setStrategy(Strategy strategy) {
+        this.strategy = strategy;
+    }
+
+    protected abstract void showCats() throws IOException;
+
+    protected String showCommands() {
+        return strategy.showCommands();
+    }
+
+    protected void doJob(int choice) {
+        strategy.doJob(choice);
+    }
 
     public void run() throws IOException {
+        showCats();
         out.println(showCommands());
         doJob(getChoice());
     }
