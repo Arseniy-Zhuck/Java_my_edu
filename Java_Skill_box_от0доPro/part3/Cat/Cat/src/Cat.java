@@ -40,7 +40,7 @@ public class Cat
         this.catState = new CatAliveState();
         this.catState.setCat(this);
         this.name = name;
-        this.catColor = color;
+        setColor(color);
     }
 
     private void die() {
@@ -83,6 +83,10 @@ public class Cat
         return weight;
     }
 
+    public CatColor getCatColor() {
+        return catColor;
+    }
+
     public String getStatus() {
         if(weight < MIN_WEIGHT) {
 
@@ -106,7 +110,7 @@ public class Cat
 
     @Override
     public String toString() {
-        return catColor.getCode() +" cat " + getName() + " of weight " + this.weight + " is " + getStatus();
+        return getCatColor().getCode() +" cat " + getName() + " of weight " + this.weight + " is " + getStatus();
     }
 
 

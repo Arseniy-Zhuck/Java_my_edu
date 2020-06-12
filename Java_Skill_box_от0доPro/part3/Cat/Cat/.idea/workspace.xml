@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3566954-15db-468d-82d7-9b60a8957e26" name="Default" comment="" />
+    <list default="true" id="d3566954-15db-468d-82d7-9b60a8957e26" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cat.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1440574635454</updated>
       <workItem from="1591949914932" duration="7597000" />
-      <workItem from="1591964649261" duration="4609000" />
+      <workItem from="1591964649261" duration="4684000" />
     </task>
     <servers />
   </component>
