@@ -87,7 +87,7 @@ public class Cat
 
     @Override
     public String toString() {
-        return catColor +" cat of weight " + this.weight + " is " + getStatus();
+        return catColor.getCode() +" cat of weight " + this.weight + " is " + getStatus();
     }
 
 

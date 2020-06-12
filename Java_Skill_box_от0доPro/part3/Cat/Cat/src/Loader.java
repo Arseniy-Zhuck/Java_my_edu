@@ -120,10 +120,10 @@ public class Loader
         cat.setColor(CatColor.BLACK);
         System.out.println(cat);
         System.out.println("Change color for new cat");
-//        String s = SimpleReading.readString();
-//        Cat cat2 = new Cat();
-//        cat.setColor(CatColor.valueOf(s));
-//        System.out.println(cat2);
+        String s = SimpleReading.readString();
+        Cat cat2 = new Cat();
+        cat2.setColor(CatColor.valueOf(s));
+        System.out.println(cat2);
     }
 
 
