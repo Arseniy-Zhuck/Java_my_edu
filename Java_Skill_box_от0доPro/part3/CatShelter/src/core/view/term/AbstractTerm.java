@@ -1,7 +1,7 @@
 package core.view.term;
 
 import core.conroller.CatShelter;
-import core.conroller.Strategy;
+import core.conroller.wholeBehaviour.Strategy;
 import core.view.io.SimpleReading;
 
 import java.io.IOException;

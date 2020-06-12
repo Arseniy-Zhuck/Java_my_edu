@@ -1,5 +1,6 @@
 package core.conroller;
 
+import core.conroller.wholeBehaviour.State;
 import core.model.list.CatArray;
 import core.model.list.CatArrayList;
 import core.view.io.CatFileReading;
@@ -42,7 +43,7 @@ public class CatShelter {
     }
 
 
-    public void showOurCats(){
+    public void showOurCats() throws IOException {
         ourCats.showCats();
     }
 
@@ -56,15 +57,15 @@ public class CatShelter {
         givenCats = new CatArrayList(MAX_CAT_COUNT);
         deadCats = new CatArrayList(MAX_CAT_COUNT);
         setFilePaths();
-        CatFileReading catFileReading = new CatFileReading(ourCats);
-        catFileReading.readCats(ourCatsPath);
-        ourCats = (CatArray) catFileReading.getCatCollection();
-        catFileReading.setCatCollection(givenCats);
-        catFileReading.readCats(givenCatsPath);
-        givenCats = (CatArrayList) catFileReading.getCatCollection();
-        catFileReading.setCatCollection(deadCats);
-        catFileReading.readCats(deadCatsPath);
-        deadCats = (CatArrayList) catFileReading.getCatCollection();
+    //    ourCats = CatFileReading.readCats(oourCatsPath);
+//        catFileReading.readCats(ourCatsPath);
+//        ourCats = (CatArray) catFileReading.getCatCollection();
+//        catFileReading.setCatCollection(givenCats);
+//        catFileReading.readCats(givenCatsPath);
+//        givenCats = (CatArrayList) catFileReading.getCatCollection();
+//        catFileReading.setCatCollection(deadCats);
+//        catFileReading.readCats(deadCatsPath);
+//        deadCats = (CatArrayList) catFileReading.getCatCollection();
     }
 
     public void setState(State state) {

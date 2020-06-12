@@ -1,10 +1,11 @@
 package core.model.list;
 
+import core.conroller.catBehavour.CatState;
 import core.model.example.Cat;
 
 import java.util.ArrayList;
 
-public class CatArrayList implements CatCollection{
+public class CatArrayList extends CatCollection {
     private ArrayList<Cat> cats;
     private int currentCatIndex;
 
@@ -80,6 +81,11 @@ public class CatArrayList implements CatCollection{
 
     @Override
     public void showCats() {
+
+    }
+
+    @Override
+    public void setAllCatsState(CatState catState) {
 
     }
 

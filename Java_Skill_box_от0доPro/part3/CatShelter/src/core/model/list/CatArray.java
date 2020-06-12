@@ -1,7 +1,10 @@
 package core.model.list;
 
-import core.conroller.AliveStrategy;
+
 import core.conroller.CatShelter;
+import core.conroller.catBehavour.CatState;
+import core.conroller.catListBehaviour.AliveStrategy;
+import core.conroller.wholeBehaviour.Strategy;
 import core.model.example.Cat;
 import core.view.term.AbstractTerm;
 import core.view.term.ListCatTerm;
@@ -9,13 +12,13 @@ import core.view.term.ListCatTerm;
 import java.io.IOException;
 
 
-public class CatArray implements CatCollection {
+public class CatArray extends CatCollection {
 
     private int maxCats;
     private int catCount;
     private Cat[] cats;
     private int currentCatIndex;
-    private AbstractTerm gUI;
+
     private CatShelter catShelter;
 
     public CatArray(int maxCats, CatShelter catShelter) {
@@ -25,7 +28,7 @@ public class CatArray implements CatCollection {
         this.catCount = 0;
         this.catShelter = catShelter;
         this.gUI = new ListCatTerm(this, catShelter);
-        this.gUI.setStrategy(new AliveStrategy((ListCatTerm) this.gUI));
+        this.gUI.setStrategy((Strategy) new AliveStrategy((ListCatTerm) this.gUI));
 
     }
     @Override
@@ -59,6 +62,13 @@ public class CatArray implements CatCollection {
     @Override
     public void showCats() throws IOException {
         this.gUI.run();
+    }
+
+    @Override
+    public void setAllCatsState(CatState catState) {
+        setCurrentCat(firstCat());
+        for (int i = 0; i < catCount; i++) cats[i].setState(catState);
+        setCurrentCat(firstCat());
     }
 
     @Override

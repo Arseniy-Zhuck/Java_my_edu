@@ -52,4 +52,8 @@ public class Cat
             return "Playing";
         }
     }
+    @Override
+    public String toString() {
+        return "cat of weight " + this.weight + " is " + getStatus();
+    }
 }

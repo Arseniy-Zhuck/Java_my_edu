@@ -9,21 +9,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class CatFileReading {
-    public CatCollection catCollection;
 
-    public CatFileReading(CatCollection catCollection) {
-        setCatCollection(catCollection);
-    }
-
-    public CatCollection getCatCollection() {
-        return catCollection;
-    }
-
-    public void setCatCollection(CatCollection catCollection) {
-        this.catCollection = catCollection;
-    }
-
-    public void readCats(String fileName) throws IOException {
+    public static CatCollection readCats(CatCollection catCollection,String fileName) throws IOException {
         File file = new File(fileName);
         //создаем объект FileReader для объекта File
         FileReader fr = new FileReader(file);
@@ -33,9 +20,9 @@ public class CatFileReading {
         String line = reader.readLine();
         while (line != null) {
             String[] lines = line.split(" ");
-            catCollection.addCat(new Cat(Double.parseDouble(lines[2]),lines[1]));
-            // считываем остальные строки в цикле
+            catCollection.addNewCat(new Cat(Double.parseDouble(lines[2]),lines[1]));
             line = reader.readLine();
         }
+        return catCollection;
     }
 }

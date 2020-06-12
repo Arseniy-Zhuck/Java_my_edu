@@ -1,5 +1,6 @@
-package core.conroller;
+package core.conroller.catListBehaviour;
 
+import core.conroller.Strategy;
 import core.view.term.ListCatTerm;
 
 public class AliveStrategy implements Strategy {

@@ -1,4 +1,6 @@
-package core.model.example;
+package core.conroller.catBehavour;
+
+import core.model.example.Cat;
 
 public interface CatState {
 

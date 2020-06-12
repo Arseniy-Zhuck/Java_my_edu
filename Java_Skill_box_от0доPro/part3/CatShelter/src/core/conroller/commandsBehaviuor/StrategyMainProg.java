@@ -1,11 +1,15 @@
-package core.conroller;
+package core.conroller.commandsBehaviuor;
 
+import core.conroller.CatShelter;
+import core.conroller.wholeBehaviour.Strategy;
 import core.view.term.AbstractTerm;
+
+import java.io.IOException;
 
 import static java.lang.System.out;
 import static jdk.internal.vm.PostVMInitHook.run;
 
-public class StrategyMainProg implements Strategy{
+public class StrategyMainProg implements Strategy {
     private AbstractTerm gUI;
     private CatShelter catShelter;
 
@@ -32,7 +36,7 @@ public class StrategyMainProg implements Strategy{
     }
 
     @Override
-    public void doJob(int choice) {
+    public void doJob(int choice) throws IOException {
         switch (choice) {
             case 1: catShelter.showOurCats(); break;
             case 2: break;

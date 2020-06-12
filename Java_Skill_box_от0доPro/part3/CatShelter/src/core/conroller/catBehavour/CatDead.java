@@ -1,8 +1,8 @@
 package core.conroller.catBehavour;
+
 import core.model.example.Cat;
 
-
-public class CatAliveOur implements CatState {
+public class CatDead implements CatState{
     private Cat cat;
     @Override
     public void setCat(Cat cat) {

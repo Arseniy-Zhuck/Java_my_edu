@@ -1,7 +1,6 @@
 package core.view.term;
 
 import core.conroller.CatShelter;
-import core.conroller.Strategy;
 import core.model.list.CatCollection;
 import core.view.io.SimpleReading;
 
