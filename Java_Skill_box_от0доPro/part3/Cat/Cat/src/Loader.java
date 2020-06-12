@@ -115,8 +115,20 @@ public class Loader
 
     }
 
+    public static void lesson4() throws IOException {
+        Cat cat = new Cat();
+        cat.setColor(CatColor.BLACK);
+        System.out.println(cat);
+        System.out.println("Change color for new cat");
+//        String s = SimpleReading.readString();
+//        Cat cat2 = new Cat();
+//        cat.setColor(CatColor.valueOf(s));
+//        System.out.println(cat2);
+    }
+
+
 
     public static void main(String[] args) throws IOException {
-        lesson3();
+        lesson4();
     }
 }
