@@ -18,6 +18,9 @@ public class Cat
     
 
 
+    public static Cat deppCatCopy(Cat cat) {
+        return new Cat(cat.getWeight(),cat.getName(),cat.getCatColor());
+    }
 
     public static int getCatCount() {
         return Cat.catCount;
@@ -110,7 +113,8 @@ public class Cat
 
     @Override
     public String toString() {
-        return getCatColor().getCode() +" cat " + getName() + " of weight " + this.weight + " is " + getStatus();
+        return getCatColor().getCode() +" cat " + getName() + " of weight " + this.weight + " is " + getStatus()+"\n" +
+                this.getClass()+ " " + this.hashCode();
     }
 
 

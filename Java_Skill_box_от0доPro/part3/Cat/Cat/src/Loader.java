@@ -100,8 +100,7 @@ public class Loader
         System.out.println("How many cats do you want?");
         int job = 1;
         int count = SimpleReading.readInteger();
-        Cat[] cats = new Cat[count];
-        for (int i= 0; i<count;i++) cats[i]= new Cat("Cat "+i,CatColor.BLACK);
+        Cat[] cats = getCatArray();
         while (job!=0) {
             System.out.println("We have " + Cat.getCatCount() + "alive cats");
             showCats(cats);
@@ -136,10 +135,37 @@ public class Loader
 
         Cat[] kittens = new Cat[3];
         for (int i = 0; i<3; i++) kittens[i] = getKitten();
-        for (Cat kitten: kittens) System.out.println(kitten);
+        showCats(kittens);
+    }
+
+    public static Cat[] getCatArray() throws IOException {
+        System.out.println("How many cats do you want?");
+        int count = SimpleReading.readInteger();
+        Cat[] cats = new Cat[count];
+        for (int i = 0; i<count; i++) {
+            System.out.println("What is the name of cat?");
+            String name = SimpleReading.readString();
+            System.out.println("What is the color of cat?");
+            String color = SimpleReading.readString();
+            cats[i] = new Cat(name,CatColor.valueOf(color.toUpperCase().trim()));
+        }
+        return cats;
+    }
+
+    public static Cat[] cloneCatArray(Cat[] cats) {
+        Cat[] newCats = new Cat[cats.length];
+        for (int i = 0; i<cats.length; i++) newCats[i] = Cat.deppCatCopy(cats[i]);
+        return newCats;
+    }
+
+    public static void lesson7() throws IOException {
+        Cat[] oldCats = getCatArray();
+        Cat[] youngCats = cloneCatArray(oldCats);
+        showCats(oldCats);
+        showCats(youngCats);
     }
 
     public static void main(String[] args) throws IOException {
-        lesson5();
+        lesson7();
     }
 }
