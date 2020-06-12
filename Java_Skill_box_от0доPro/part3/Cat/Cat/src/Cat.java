@@ -1,6 +1,8 @@
 
 public class Cat
 {
+    private static int catCount = 0;
+
     private double originWeight;
     private double weight;
 
@@ -8,12 +10,18 @@ public class Cat
     private double maxWeight;
     private double eatAmount;
 
+    public static int getCatCount() {
+        return Cat.catCount;
+    }
+
+
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
         eatAmount = 0;
+        catCount++;
     }
 
     public double getEatAmount() {
@@ -45,9 +53,11 @@ public class Cat
 
     public String getStatus() {
         if(weight < minWeight) {
+            catCount--;
             return "Dead";
         }
         else if(weight > maxWeight) {
+            catCount--;
             return "Exploded";
         }
         else if(weight > originWeight) {
