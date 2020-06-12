@@ -47,8 +47,17 @@ public class Loader
         showCats(cats);
     }
 
+    public static void lesson2() {
+        Cat cat = new Cat();
+        System.out.println(cat);
+        cat.feed(150.0);
+        System.out.println(cat);
+        for (int i=0;i<5;i++) cat.pee();
+        System.out.println(cat);
+        System.out.println(cat.getEatAmount());
+    }
 
     public static void main(String[] args) throws IOException {
-        lesson1();
+        lesson2();
     }
 }

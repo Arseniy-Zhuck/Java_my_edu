@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3566954-15db-468d-82d7-9b60a8957e26" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/CatShelter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/CatShelter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/catBehavour/CatAliveOur.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/catBehavour/CatAliveOur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/catBehavour/CatState.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/catBehavour/CatState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/catListBehaviour/AliveStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/catListBehaviour/AliveStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/commandsBehaviuor/StrategyMainProg.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/commandsBehaviuor/StrategyMainProg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/wholeBehaviour/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/wholeBehaviour/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/wholeBehaviour/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/wholeBehaviour/Strategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/wholeBehaviour/WhiteState.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/conroller/wholeBehaviour/WhiteState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/model/example/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/model/example/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/model/list/CatArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/model/list/CatArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/model/list/CatArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/model/list/CatArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/model/list/CatCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/model/list/CatCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/view/io/CatFileReading.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/view/io/CatFileReading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/view/term/AbstractTerm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/view/term/AbstractTerm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CatShelter/src/core/view/term/ListCatTerm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CatShelter/src/core/view/term/ListCatTerm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +152,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1440574635454</updated>
-      <workItem from="1591949914932" duration="1865000" />
+      <workItem from="1591949914932" duration="2378000" />
     </task>
     <servers />
   </component>
@@ -185,22 +168,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom" timestamp="1591957092759">
+    <state width="1493" height="294" key="GridCell.Tab.0.bottom" timestamp="1591957676379">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591957092759" />
-    <state width="1493" height="294" key="GridCell.Tab.0.center" timestamp="1591957092759">
+    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591957676379" />
+    <state width="1493" height="294" key="GridCell.Tab.0.center" timestamp="1591957676379">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591957092759" />
-    <state width="1493" height="294" key="GridCell.Tab.0.left" timestamp="1591957092758">
+    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591957676379" />
+    <state width="1493" height="294" key="GridCell.Tab.0.left" timestamp="1591957676379">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591957092758" />
-    <state width="1493" height="294" key="GridCell.Tab.0.right" timestamp="1591957092759">
+    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591957676379" />
+    <state width="1493" height="294" key="GridCell.Tab.0.right" timestamp="1591957676379">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591957092759" />
+    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591957676379" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1591950795456">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
