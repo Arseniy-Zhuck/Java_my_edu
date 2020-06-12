@@ -29,7 +29,7 @@ public class Loader
 
     public static void lesson1() throws IOException {
         Cat[] cats = new Cat[7];
-        for (int i= 0; i<7;i++) cats[i]= new Cat();
+        for (int i= 0; i<7;i++) cats[i]= new Cat("Cat"+1,CatColor.BLACK);
         showCats(cats);
         System.out.println("Write \"next\"");
         String s = SimpleReading.readString();
@@ -48,7 +48,7 @@ public class Loader
     }
 
     public static void lesson2() {
-        Cat cat = new Cat();
+        Cat cat = new Cat("Cat1",CatColor.GREY);
         System.out.println(cat);
         cat.feed(150.0);
         System.out.println(cat);
@@ -101,7 +101,7 @@ public class Loader
         int job = 1;
         int count = SimpleReading.readInteger();
         Cat[] cats = new Cat[count];
-        for (int i= 0; i<count;i++) cats[i]= new Cat();
+        for (int i= 0; i<count;i++) cats[i]= new Cat("Cat "+i,CatColor.BLACK);
         while (job!=0) {
             System.out.println("We have " + Cat.getCatCount() + "alive cats");
             showCats(cats);
@@ -116,19 +116,30 @@ public class Loader
     }
 
     public static void lesson4() throws IOException {
-        Cat cat = new Cat();
-        cat.setColor(CatColor.BLACK);
+        Cat cat = new Cat("Cat1",CatColor.BLACK);
         System.out.println(cat);
         System.out.println("Change color for new cat");
         String s = SimpleReading.readString();
-        Cat cat2 = new Cat();
-        cat2.setColor(CatColor.valueOf(s));
+        Cat cat2 = new Cat("Cat2",CatColor.valueOf(s));
         System.out.println(cat2);
     }
 
+    private static Cat getKitten() throws IOException {
+        System.out.println("What is the name of kitten?");
+        String name = SimpleReading.readString();
+        System.out.println("What is the color of kitten?");
+        String color = SimpleReading.readString();
+        return Cat.getKitten(name,CatColor.valueOf(color.toUpperCase().trim()));
+    }
 
+    public static void lesson5() throws IOException {
+
+        Cat[] kittens = new Cat[3];
+        for (int i = 0; i<3; i++) kittens[i] = getKitten();
+        for (Cat kitten: kittens) System.out.println(kitten);
+    }
 
     public static void main(String[] args) throws IOException {
-        lesson4();
+        lesson5();
     }
 }

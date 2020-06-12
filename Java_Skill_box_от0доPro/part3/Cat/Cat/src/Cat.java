@@ -12,20 +12,35 @@ public class Cat
     private CatColor catColor;
     private double eatAmount;
     private CatState catState;
+    private String name;
     //private boolean isDead = false;
+
+    
+
+
 
     public static int getCatCount() {
         return Cat.catCount;
     }
 
+    public static Cat getKitten(String name, CatColor color){
+        return new Cat(1100.0,name,color);
+    }
 
-    public Cat() {
-        weight = 1500.0 + 3000.0 * Math.random();
+    public Cat(String name, CatColor color) {
+        this(1500.0 + 3000.0 * Math.random(),name, color);
+
+    }
+
+    public Cat(double weight, String name, CatColor color) {
+        this.weight = weight;
         originWeight = weight;
         eatAmount = 0;
         catCount++;
         this.catState = new CatAliveState();
         this.catState.setCat(this);
+        this.name = name;
+        this.catColor = color;
     }
 
     private void die() {
@@ -38,6 +53,10 @@ public class Cat
         if ((getStatus().equals("Dead"))||(getStatus().equals("Exploded"))) {
             die();
         }
+    }
+
+    public String getName() {
+        return name;
     }
 
     public double getEatAmount() {
@@ -87,7 +106,7 @@ public class Cat
 
     @Override
     public String toString() {
-        return catColor.getCode() +" cat of weight " + this.weight + " is " + getStatus();
+        return catColor.getCode() +" cat " + getName() + " of weight " + this.weight + " is " + getStatus();
     }
 
 
