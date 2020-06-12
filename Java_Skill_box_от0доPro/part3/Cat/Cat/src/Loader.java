@@ -82,7 +82,7 @@ public class Loader
             case 2:
                 System.out.println("How many water you give cat?");
                 double water = SimpleReading.readDouble();
-                cat.feed(water);
+                cat.drink(water);
                 break;
             case 3:
                 for(int i=0; i<10;i++) cat.meow();
