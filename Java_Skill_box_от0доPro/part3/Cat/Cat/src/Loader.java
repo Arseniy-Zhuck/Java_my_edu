@@ -105,9 +105,12 @@ public class Loader
         while (job!=0) {
             System.out.println("We have " + Cat.getCatCount() + "alive cats");
             showCats(cats);
-            Cat currentCat = cats[chooseCat()];
-            job = chooseJob();
-            doJob(job,currentCat);
+            int catIndex = chooseCat() - 1;
+            if (catIndex < count) {
+                Cat currentCat = cats[catIndex];
+                job = chooseJob();
+                doJob(job, currentCat);
+            } else job = 0;
         }
 
     }

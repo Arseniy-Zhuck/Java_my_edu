@@ -9,7 +9,8 @@ public class Cat
     private double minWeight;
     private double maxWeight;
     private double eatAmount;
-    private boolean isDead = false;
+    private CatState catState;
+    //private boolean isDead = false;
 
     public static int getCatCount() {
         return Cat.catCount;
@@ -23,12 +24,14 @@ public class Cat
         maxWeight = 9000.0;
         eatAmount = 0;
         catCount++;
+        this.catState = new CatAliveState();
+        this.catState.setCat(this);
     }
 
     private void die() {
         Cat.catCount--;
-        isDead = true;
         System.out.println("The cat is dead");
+        this.catState = new CatDeadState();
     }
 
     private void check() {
@@ -42,35 +45,19 @@ public class Cat
     }
 
     public void pee() {
-        if (!isDead) {
-            weight -= 200;
-            System.out.println("Soon you smell it");
-            check();
-        } else System.out.println("Dead cats don't go pee");
+        catState.pee();
     }
 
     public void meow() {
-        if (!isDead) {
-            weight = weight - 1;
-            System.out.println("Meow");
-            check();
-        } else System.out.println("Dead cats don't meow");
-
+        catState.meow();
     }
 
     public void feed(Double amount) {
-        if (!isDead) {
-            eatAmount += amount;
-            weight = weight + amount;
-            check();
-        } else System.out.println("Dead cats don't eat");
+        catState.feed(amount);
     }
 
     public void drink(Double amount) {
-        if (!isDead) {
-                weight = weight + amount;
-                check();
-        } else System.out.println("Dead cats don't drink");
+        catState.drink(amount);
     }
 
     public Double getWeight() {
@@ -98,4 +85,71 @@ public class Cat
     public String toString() {
         return "cat of weight " + this.weight + " is " + getStatus();
     }
+
+
+
+    private class CatAliveState implements CatState{
+        private Cat cat;
+
+        @Override
+        public void feed(double amount) {
+            cat.eatAmount += amount;
+            cat.weight = weight + amount;
+            cat.check();
+        }
+
+        @Override
+        public void drink(double amount) {
+            weight = weight + amount;
+            check();
+        }
+
+        @Override
+        public void meow() {
+            weight = weight - 1;
+            System.out.println("Meow");
+            check();
+        }
+
+        @Override
+        public void pee() {
+            weight -= 200;
+            System.out.println("Soon you smell it");
+            check();
+        }
+
+        @Override
+        public void setCat(Cat cat) {
+            this.cat = cat;
+        }
+    }
+
+    private class CatDeadState implements CatState{
+
+        @Override
+        public void feed(double amount) {
+            System.out.println("Dead cats don't eat");
+        }
+
+        @Override
+        public void drink(double amount) {
+            System.out.println("Dead cats don't drink");
+        }
+
+        @Override
+        public void meow() {
+            System.out.println("Dead cats don't meow");
+        }
+
+        @Override
+        public void pee() {
+            System.out.println("Dead cats don't go pee");
+        }
+
+        @Override
+        public void setCat(Cat cat) {
+
+        }
+    }
+
 }
