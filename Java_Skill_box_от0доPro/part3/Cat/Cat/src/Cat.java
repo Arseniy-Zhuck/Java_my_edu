@@ -7,7 +7,7 @@ public class Cat
 
     private static int catCount = 0;
 
-    private double originWeight;
+    private final double originWeight;
     private double weight;
     private CatColor catColor;
     private double eatAmount;
