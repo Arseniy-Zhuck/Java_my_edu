@@ -1,0 +1,11 @@
+true 3900
+true 31100
+true 37400
+true 1
+true 36100
+false 11600
+false 3800
+false 4900
+false 3700
+false 4500
+false 6400
