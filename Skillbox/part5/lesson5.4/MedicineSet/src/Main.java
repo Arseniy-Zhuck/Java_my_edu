@@ -25,6 +25,7 @@ public class Main {
                 printSet(medicines);
                 continue;
             }
+            if (medicines.contains(s)) System.out.println("We already have this midicine");
             medicines.add(s);
         }
     }
