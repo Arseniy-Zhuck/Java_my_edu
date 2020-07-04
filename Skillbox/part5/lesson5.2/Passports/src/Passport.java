@@ -10,9 +10,21 @@ import java.util.regex.Pattern;
 public class Passport {
     private String FIO, region,address, seria, number;
     private Date passportDate, birthDate;
-    private static Map<String, String> REGIONS_PASSPORT;
-    // он private и я его вызываю только из этого класса, когда уверен, что запись есть
-    // и еще у меня ВОПРОС, компилятор ругался, когда этот метод небыл static на его вызов в конструкторе, ПОЧЕМУ?
+    // вопрос 1 хотел сделать вот так но не знаю тогда где писать обработчик исключений и
+    // не понимаю когда он сработает собственно пока ошибался в имени файла в подключении была такая проблема
+    // плюс я читал, уже не помню где, что обработчики исключения надо стараться делать
+    // как можно выше по stacktrace и я запутался, как быть тут, то есть можно внутри этого метода readRegionsPassport()
+    // сделать обработчик, но я тогда недопонимаю, когда этот метод будет вызван, то есть что
+    // произойдет в программе. Во время экспериментов получилось, что при создании первого экземпляра пасспорт
+    // и он вывел целую кучу cause в которых я запутался
+    // ну и плюс сам readRegionsPassport() выглядел в этом случае как какое-то чудовище
+    // так как ни одно исключение нельзя было пробросить наверх
+    // ну и в связи с этим вопрос, как определить static константу, если она получается методом,
+    // кидающим исключения, одно из которых для меня важно и я хочу его обработать
+    // и она обязана быть static, не строить же мапу для каждого объекта
+    private final static Map<String, String> REGIONS_PASSPORT = FileWorker.readRegionsPassport();
+
+
     private static String getCodeByRegion(String region) {
         String res = "";
         boolean flag = false;
@@ -30,7 +42,7 @@ public class Passport {
     }
 
     public static void setRegions() throws IOException {
-        REGIONS_PASSPORT = FileWorker.readRegionsPassport();
+       // REGIONS_PASSPORT = FileWorker.readRegionsPassport();
     }
 
     public static boolean checkFIO(String maybeFIO) {
@@ -52,7 +64,10 @@ public class Passport {
         return Pattern.compile("[0-9]{6}").matcher(s).matches();
     }
 
-    private static String formSeria(String region, Date passportDate) {
+    // прошу прощения, кучу методов после уже написал, и коммент сдвинулся((
+    // вопрос был по этому методу formSeria
+    // и еще у меня ВОПРОС, компилятор ругался, когда этот метод небыл static на его вызов в конструкторе, ПОЧЕМУ?
+    private String formSeria(String region, Date passportDate) {
         int year = passportDate.getYear()%100;
         String s = year < 10 ? "0" + year : "" + year;
         return getCodeByRegion(region) + s;
@@ -86,7 +101,7 @@ public class Passport {
 
     public Passport(String FIO, String region, String address, String number, Date passportDate,
                     Date birthDate) {
-        this(formSeria(region, passportDate),
+        this(formSeria(region, passportDate), // я этот метод вызываю здесь, почему ошибка?
                 number,
                 passportDate,
                 FIO,
