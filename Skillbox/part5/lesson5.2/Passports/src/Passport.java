@@ -22,7 +22,7 @@ public class Passport {
     // ну и в связи с этим вопрос, как определить static константу, если она получается методом,
     // кидающим исключения, одно из которых для меня важно и я хочу его обработать
     // и она обязана быть static, не строить же мапу для каждого объекта
-    private final static Map<String, String> REGIONS_PASSPORT = FileWorker.readRegionsPassport();
+    private static Map<String, String> REGIONS_PASSPORT;
 
 
     private static String getCodeByRegion(String region) {
@@ -42,7 +42,7 @@ public class Passport {
     }
 
     public static void setRegions() throws IOException {
-       // REGIONS_PASSPORT = FileWorker.readRegionsPassport();
+       REGIONS_PASSPORT = FileWorker.readRegionsPassport();
     }
 
     public static boolean checkFIO(String maybeFIO) {
@@ -67,7 +67,7 @@ public class Passport {
     // прошу прощения, кучу методов после уже написал, и коммент сдвинулся((
     // вопрос был по этому методу formSeria
     // и еще у меня ВОПРОС, компилятор ругался, когда этот метод небыл static на его вызов в конструкторе, ПОЧЕМУ?
-    private String formSeria(String region, Date passportDate) {
+    private static String formSeria(String region, Date passportDate) {
         int year = passportDate.getYear()%100;
         String s = year < 10 ? "0" + year : "" + year;
         return getCodeByRegion(region) + s;
