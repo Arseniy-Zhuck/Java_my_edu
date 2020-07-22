@@ -23,7 +23,7 @@ public class Cities
             } catch (NullPointerException e) {
                 System.out.println("CONGRADULATIONS!!! YOU WIN!!!");
                 break;
-            }
+            } // тут не понял, как finally притулить
             String city = reader.readLine();
             if(previousCity.length() > 0 && isNextCity(previousCity, city)) {
                 System.out.println("This city is wrong! Try again!");
@@ -51,13 +51,14 @@ public class Cities
     private static boolean isNextCity(String currentCity, String nextCity)
     {
         int currentCityLastChar = currentCity.length() - 1;
-        boolean b = true;
+        boolean b = false;
         try {
             b = currentCity.charAt(currentCityLastChar) ==
                     nextCity.toLowerCase().charAt(0);
         } catch (StringIndexOutOfBoundsException e) {
-            return false;
+            b = false;
+        } finally {
+            return b;
         }
-        return b;
     }
 }
