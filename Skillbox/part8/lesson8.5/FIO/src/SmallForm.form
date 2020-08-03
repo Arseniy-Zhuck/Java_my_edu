@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="SmallForm">
+  <grid id="27dc6" binding="rootPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="95" y="20" width="425" height="258"/>
+    </constraints>
+    <properties>
+      <maximumSize width="420" height="120"/>
+      <minimumSize width="420" height="120"/>
+      <preferredSize width="420" height="120"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="d7ac5" class="javax.swing.JLabel" binding="lblFIO">
+        <constraints/>
+        <properties>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <maximumSize width="100" height="16"/>
+          <minimumSize width="100" height="16"/>
+          <preferredSize width="100" height="16"/>
+          <text value="Ф.И.О."/>
+        </properties>
+      </component>
+      <component id="1a391" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+        <constraints/>
+        <properties>
+          <minimumSize width="349" height="30"/>
+          <preferredSize width="349" height="30"/>
+        </properties>
+      </component>
+      <component id="e4f6d" class="javax.swing.JButton" binding="btnSwitch">
+        <constraints/>
+        <properties>
+          <text value="Переключить"/>
+        </properties>
+      </component>
+      <component id="fc207" class="javax.swing.JProgressBar" binding="progressBar1" default-binding="true">
+        <constraints/>
+        <properties>
+          <maximumSize width="410" height="15"/>
+          <minimumSize width="410" height="15"/>
+          <preferredSize width="410" height="15"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
