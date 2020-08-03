@@ -97,30 +97,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1002" y="219" width="380" height="559" key="#com.intellij.ide.util.MemberChooser" timestamp="1596447438732">
+    <state x="1002" y="219" width="380" height="559" key="#com.intellij.ide.util.MemberChooser" timestamp="1596449320346">
       <screen x="0" y="0" width="1920" height="1047" />
     </state>
-    <state x="1002" y="219" width="380" height="559" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1047@0.0.1920.1047" timestamp="1596447438732" />
+    <state x="1002" y="219" width="380" height="559" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1047@0.0.1920.1047" timestamp="1596449320346" />
     <state x="977" y="258" width="430" height="481" key="FileChooserDialogImpl" timestamp="1596379844332">
       <screen x="0" y="0" width="1920" height="1047" />
     </state>
     <state x="977" y="258" width="430" height="481" key="FileChooserDialogImpl/0.0.1920.1047@0.0.1920.1047" timestamp="1596379844332" />
-    <state width="1352" height="255" key="GridCell.Tab.0.bottom" timestamp="1596448019373">
+    <state width="1352" height="255" key="GridCell.Tab.0.bottom" timestamp="1596449444433">
       <screen x="0" y="0" width="1920" height="1047" />
     </state>
-    <state width="1352" height="255" key="GridCell.Tab.0.bottom/0.0.1920.1047@0.0.1920.1047" timestamp="1596448019373" />
-    <state width="1352" height="255" key="GridCell.Tab.0.center" timestamp="1596448019370">
+    <state width="1352" height="255" key="GridCell.Tab.0.bottom/0.0.1920.1047@0.0.1920.1047" timestamp="1596449444433" />
+    <state width="1352" height="255" key="GridCell.Tab.0.center" timestamp="1596449444432">
       <screen x="0" y="0" width="1920" height="1047" />
     </state>
-    <state width="1352" height="255" key="GridCell.Tab.0.center/0.0.1920.1047@0.0.1920.1047" timestamp="1596448019370" />
-    <state width="1352" height="255" key="GridCell.Tab.0.left" timestamp="1596448019364">
+    <state width="1352" height="255" key="GridCell.Tab.0.center/0.0.1920.1047@0.0.1920.1047" timestamp="1596449444432" />
+    <state width="1352" height="255" key="GridCell.Tab.0.left" timestamp="1596449444431">
       <screen x="0" y="0" width="1920" height="1047" />
     </state>
-    <state width="1352" height="255" key="GridCell.Tab.0.left/0.0.1920.1047@0.0.1920.1047" timestamp="1596448019364" />
-    <state width="1352" height="255" key="GridCell.Tab.0.right" timestamp="1596448019372">
+    <state width="1352" height="255" key="GridCell.Tab.0.left/0.0.1920.1047@0.0.1920.1047" timestamp="1596449444431" />
+    <state width="1352" height="255" key="GridCell.Tab.0.right" timestamp="1596449444433">
       <screen x="0" y="0" width="1920" height="1047" />
     </state>
-    <state width="1352" height="255" key="GridCell.Tab.0.right/0.0.1920.1047@0.0.1920.1047" timestamp="1596448019372" />
+    <state width="1352" height="255" key="GridCell.Tab.0.right/0.0.1920.1047@0.0.1920.1047" timestamp="1596449444433" />
     <state width="1352" height="315" key="GridCell.Tab.1.bottom" timestamp="1596447967139">
       <screen x="0" y="0" width="1920" height="1047" />
     </state>
@@ -145,16 +145,5 @@
       <screen x="0" y="0" width="1920" height="1047" />
     </state>
     <state x="975" y="250" width="434" height="496" key="refactoring.ChangeSignatureDialog/0.0.1920.1047@0.0.1920.1047" timestamp="1596446227096" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Form.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

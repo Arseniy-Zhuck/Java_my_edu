@@ -1,14 +1,22 @@
 import javax.swing.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public abstract class MyForm {
     private JFrame thisFrame;
     private JFrame anotherFrame;
     private MyForm anotherForm;
 
+
+    public abstract JPanel getRootPanel();
+
     protected MyForm(JFrame thisFrame, JFrame anotherFrame) {
         this.thisFrame = thisFrame;
         this.anotherFrame = anotherFrame;
+
     }
+
+    protected abstract void switchForm();
 
     public MyForm getAnotherForm() {
         return anotherForm;
