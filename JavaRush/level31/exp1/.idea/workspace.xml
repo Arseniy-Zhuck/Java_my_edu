@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="041e5b49-2a19-4ab5-887a-00ab374d4d4c" name="Default Changelist" comment="" />
+    <list default="true" id="e80e9ced-7848-412b-995d-f1eb805ce44a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +41,7 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1fJuFv8WOO4oYbidFwAO5aIXNVC" />
+  <component name="ProjectId" id="1g35ESwtuQyTQbVuIDxRdBAv9xy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -53,30 +53,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="SymbolsCount" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="041e5b49-2a19-4ab5-887a-00ab374d4d4c" name="Default Changelist" comment="" />
-      <created>1595948416568</created>
+      <changelist id="e80e9ced-7848-412b-995d-f1eb805ce44a" name="Default Changelist" comment="" />
+      <created>1597330323535</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1595948416568</updated>
+      <updated>1597330323535</updated>
     </task>
     <servers />
   </component>
@@ -91,23 +77,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1352" height="255" key="GridCell.Tab.0.bottom" timestamp="1595952077105">
-      <screen x="0" y="0" width="1920" height="1047" />
-    </state>
-    <state width="1352" height="255" key="GridCell.Tab.0.bottom/0.0.1920.1047@0.0.1920.1047" timestamp="1595952077105" />
-    <state width="1352" height="255" key="GridCell.Tab.0.center" timestamp="1595952077105">
-      <screen x="0" y="0" width="1920" height="1047" />
-    </state>
-    <state width="1352" height="255" key="GridCell.Tab.0.center/0.0.1920.1047@0.0.1920.1047" timestamp="1595952077105" />
-    <state width="1352" height="255" key="GridCell.Tab.0.left" timestamp="1595952077105">
-      <screen x="0" y="0" width="1920" height="1047" />
-    </state>
-    <state width="1352" height="255" key="GridCell.Tab.0.left/0.0.1920.1047@0.0.1920.1047" timestamp="1595952077105" />
-    <state width="1352" height="255" key="GridCell.Tab.0.right" timestamp="1595952077105">
-      <screen x="0" y="0" width="1920" height="1047" />
-    </state>
-    <state width="1352" height="255" key="GridCell.Tab.0.right/0.0.1920.1047@0.0.1920.1047" timestamp="1595952077105" />
   </component>
 </project>

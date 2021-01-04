@@ -7,6 +7,7 @@ import java.util.TreeMap;
 public class Main {
     public static void main(String[] args) throws IOException {
         FileReader fileReader = new FileReader("src/EnglishText.txt");
+//        BufferedReader bufferedReader = new BufferedReader(fileReader);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String line = bufferedReader.readLine();
         Map<Character, Integer> lettersCount = new TreeMap<>();
